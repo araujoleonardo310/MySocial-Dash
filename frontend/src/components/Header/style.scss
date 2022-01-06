@@ -1,0 +1,51 @@
+.header {
+  width: 70%;
+  height: 10%;
+
+  padding: 1em;
+
+  float: right;
+
+  background: var(--colorWhite);
+
+  h2 {
+    margin-left: 1em;
+  }
+
+  p {
+    font-weight: 500;
+    display: contents;
+  }
+
+  button {
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: all 0.2s ease-in-out;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+
+    color: var(--colorWhite);
+    background: var(--colorShadow);
+  }
+
+  .profileAndLogOut {
+    width: 40%;
+    padding: 1em;
+
+    bottom: 3em;
+    position: relative;
+    
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
+  .profile {
+    width: 50px;
+    border-radius: 100%;
+  }
+}

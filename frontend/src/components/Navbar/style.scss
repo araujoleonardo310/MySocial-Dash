@@ -1,0 +1,46 @@
+.navbar {
+  width: 30%;
+  height: 100vh;
+
+  padding: 4em 2em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  color: var(--colorWhite);
+  background: var(--colorBlack);
+
+  .list {
+    width: 100%;
+    margin-top: 2em;
+
+    li {
+      margin: 1.5em;
+      padding: 1em 0;
+
+      font-weight: 500;
+      text-align: center;
+      letter-spacing: 2px;
+
+      cursor: pointer;
+      transition: all 0.5s;
+
+      color: var(--colorDescriptions);
+
+      span {
+        font-size: 1.2em;
+        margin-right: 0.5em;
+      }
+    }
+
+    li:hover {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+      font-weight: 600;
+      color: var(--colorWhite);
+      background: var(--colorShadow);
+    }
+  }
+}
