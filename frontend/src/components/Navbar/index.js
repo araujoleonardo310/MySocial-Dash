@@ -11,10 +11,10 @@ const Navbar = () => {
       <h2 className="dash">MySocial Dash</h2>
 
       <ul className="list">
-        <li className="section"><span className="icon"><AiOutlineUsergroupAdd /></span>Cadastro</li>
-        <li className="section"><span className="icon"><FiUsers /></span>Usuários</li>
-        <li className="section"><span className="icon"><RiVideoLine /></span>Assistir</li>
-        <li className="section"><span className="icon"><AiOutlineVideoCameraAdd /></span>Novos Vídeos</li>
+        <li><span><AiOutlineUsergroupAdd /></span>Cadastro</li>
+        <li><span><FiUsers /></span>Usuários</li>
+        <li><span><RiVideoLine /></span>Assistir</li>
+        <li><span><AiOutlineVideoCameraAdd /></span>Novos Vídeos</li>
       </ul>
     </div>
   );

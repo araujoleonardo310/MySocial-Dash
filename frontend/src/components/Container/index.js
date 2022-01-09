@@ -1,13 +1,13 @@
 import React from "react";
-import './style.scss';
 import Header from "../Header";
 import Navbar from "../Navbar";
+import "./style.scss";
 
 const Container = () => {
   return (
     <div className="container">
       <Header />
-      <Navbar />         
+      <Navbar />
     </div>
   );
 };

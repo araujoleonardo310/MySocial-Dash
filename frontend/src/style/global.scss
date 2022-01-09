@@ -12,8 +12,9 @@
   --colorWhite: #fff;
   --colorShadow: #1e1f28;
   --colorBackgnd: #f4f5fc;
+  --ColorBackgnd2: #f56d02;
   --colorText: #7782d7;
-  --colorDescriptions: #a2a9b5;
+  --colorDescriptions: #2e2d2d;
 }
 
 body {
@@ -25,6 +26,10 @@ body {
   font-size: 1em;
 
   background: var(--colorContainer);
+}
+
+h2 {
+  font-size: 1.7em;
 }
 
 button {

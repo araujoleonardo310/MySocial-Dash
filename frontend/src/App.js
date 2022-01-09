@@ -1,13 +1,14 @@
 import React from "react";
-import Container from "./components/Container";
+import Routes from "./routes";
+
 import "./style/global.scss";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Container />
-    </>
+    <div>
+      <Routes />
+    </div>
   );
-}
+};
 
 export default App;

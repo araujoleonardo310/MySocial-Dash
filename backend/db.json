@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "lastname": "typicode",
+      "email": "teste@email.com"
+    }
+  ],
+  "videos": [{ "id": 1, "video": "video.mp4" }]
+}
