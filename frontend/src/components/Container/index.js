@@ -1,13 +1,15 @@
 import React from "react";
-import Header from "../Header";
-import Navbar from "../Navbar";
 import "./style.scss";
 
-const Container = () => {
+import Header from "../Header";
+import Navbar from "../Navbar";
+
+const Container = (props) => {
   return (
     <div className="container">
-      <Header />
+      <Header title={props.section}/>
       <Navbar />
+      {props.children}
     </div>
   );
 };

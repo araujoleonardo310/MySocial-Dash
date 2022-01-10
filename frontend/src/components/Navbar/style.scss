@@ -15,10 +15,8 @@
   .list {
     width: 100%;
     margin-top: 2em;
-    
+
     li {
-    
-      
       margin: 1.5em;
       padding: 1em 0;
 
@@ -27,11 +25,13 @@
       text-align: center;
       letter-spacing: 2px;
 
-
       cursor: pointer;
       transition: all 0.5s;
 
-      color: var(--colorDescriptions);
+      a,
+      span {
+        color: var(--colorDescriptions);
+      }
 
       span {
         font-size: 1.3em;
@@ -41,12 +41,14 @@
 
     li:hover {
       font-weight: 700;
-
       transform: scale(1.2);
       -webkit-transform: scale(1.2);
-
-      color: var(--colorWhite);
       background: var(--colorShadow);
+
+      a,
+      span {
+        color: var(--colorWhite);
+      }
     }
   }
 }

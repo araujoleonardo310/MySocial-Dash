@@ -7,14 +7,13 @@ import "./style.scss";
 
 const Login = () => {
   const history = useHistory();
-
   const [user, setUser] = useState([]);
 
-  const Auth = async (event) => {
-    event.preventDefault();
+  const Auth = async (e) => {
+    e.preventDefault();
     const { data } = await LoginServices.login();
 
-    if (user.email === data[0].email && user.password === data[0].password) {
+    if (user.email == data[0].email && user.password == data[0].password) {
       history.push("/home");
     }
   };
@@ -38,7 +37,17 @@ const Login = () => {
             id="password"
             onChange={(e) => setUser({ ...user, password: e.target.value })}
           />
-          <button type="submit">Login</button>
+          <label htmlFor="typeConta" className="typeConta">
+            Tipo de conta
+          </label>
+          <select
+            id="typeConta"
+            onChange={(event) => setUser({ ...user, type: event.target.value })}
+          >
+            <option value="administrador">Administrador</option>
+            <option value="usuario">Usuário</option>
+          </select>
+          <button onClick={(e) => Auth(e)}>Login</button>
         </form>
       </div>
     </div>

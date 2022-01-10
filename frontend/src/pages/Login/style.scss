@@ -1,14 +1,14 @@
 .container__login {
   width: 100%;
   height: 100vh;
-  background: url("../../assets/img/backgndLogin.jpg") no-repeat center center;
+  background: url("../../components/assets/img/backgndLogin.jpg") no-repeat center center;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .container__form {
     width: 30vw;
-    height: 50vh;
+    height: 57vh;
 
     padding: 4em 2em;
 
@@ -25,6 +25,15 @@
       font-weight: 500;
       font-size: 1.2em;
       letter-spacing: 2px;
+    }
+
+    .typeConta {
+      display: inline;
+      margin-right: 0.5em;
+    }
+
+    select {
+      padding: 0.5em;
     }
 
     input {

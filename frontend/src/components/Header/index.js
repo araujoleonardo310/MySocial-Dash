@@ -3,10 +3,10 @@ import "./style.scss";
 
 import profile from "../assets/img/dogUser.jpg";
 
-const Header = () => {
+const Header = ({title}) => {
   return (
     <div className="header">
-      <h2 className="title">Overview</h2>
+      <h2 className="title">{title}</h2>
       <div className="profileAndLogOut">
         <p>
           araujoleonardo310@gmail.com
