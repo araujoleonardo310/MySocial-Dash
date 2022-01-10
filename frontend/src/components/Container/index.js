@@ -7,9 +7,11 @@ import Navbar from "../Navbar";
 const Container = (props) => {
   return (
     <div className="container">
-      <Header title={props.section}/>
+      <Header title={props.section} />
       <Navbar />
-      {props.children}
+      <div>
+        <div className="content">{props.children}</div>
+      </div>
     </div>
   );
 };

@@ -8,4 +8,11 @@
       "status": "active"
     }
   ]
+
+  "videos": [
+    {
+      "id": 1,
+      "link": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4"
+    }
+  ]
 }

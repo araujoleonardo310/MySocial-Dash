@@ -2,7 +2,22 @@ import Container from "../../components/Container"
 const Home = () => {
 
   return (
-   <Container section="Video"/>
+   <Container section="Video" 
+   
+   children={
+     <div>
+       <p>Olá</p>
+     </div>
+   }
+   
+   
+   
+   
+   
+   
+   
+   />
+     
   );
 };
 
