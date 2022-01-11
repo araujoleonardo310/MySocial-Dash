@@ -5,14 +5,22 @@
       "name": "teste",
       "email": "teste@email.com",
       "password": "senha123",
-      "status": "active"
-    }
-  ]
-
-  "videos": [
+      "typeAccont": "administrador",
+      "status": "active",
+      "link": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4",
+      "title": "titulo",
+      "description": "ksksksksskskskkskskskskksksksks"
+    },
     {
-      "id": 1,
-      "link": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4"
+      "id": 2,
+      "name": "teste",
+      "email": "teste@email.com",
+      "password": "senha123",
+      "typeAccont": "administrador",
+      "status": "active",
+      "link": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4",
+      "title": "titulo",
+      "description": "ksksksksskskskkskskskskksksksks"
     }
   ]
 }

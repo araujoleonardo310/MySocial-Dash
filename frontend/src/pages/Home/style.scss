@@ -1,0 +1,38 @@
+table {
+  width: 38vw;
+  display: inline;
+}
+
+th {
+  width: 10vw;
+  text-transform: uppercase;
+}
+
+td {
+  padding-top: 1em;
+  text-align: center;
+}
+
+.container__videos {
+  margin-top: 5em;
+  section {
+    width: 47vw;
+    height: 25vh;
+
+    padding: 1em;
+
+    display: flex;
+    justify-content: space-around;
+
+    h3 {
+      font-weight: 700;
+      margin-bottom: 0.5em;
+
+      color: var(--colorText);
+    }
+
+    p {
+      color: var(--colorText);
+    }
+  }
+}
