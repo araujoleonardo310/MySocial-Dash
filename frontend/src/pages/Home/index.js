@@ -20,26 +20,29 @@ const Home = () => {
     <Container
       section="Home"
       DashUsers={
-        <table>
-          <thead>
-            <tr>
-              <th>id</th>
-              <th>nome</th>
-              <th>e-mail</th>
-              <th>Tipo</th>
-            </tr>
-          </thead>
-          <tbody>
-            {users.map(({ id, name, email, typeAccont }) => (
-              <tr key={id}>
-                <td>{id}</td>
-                <td>{name}</td>
-                <td>{email}</td>
-                <td>{typeAccont}</td>
+        <div className="container__table">
+          <h2>Usuários</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>nome</th>
+                <th>e-mail</th>
+                <th>Tipo</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {users.map(({ id, name, email, typeAccont }) => (
+                <tr key={id}>
+                  <td>{id}</td>
+                  <td>{name}</td>
+                  <td>{email}</td>
+                  <td>{typeAccont}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       }
       DashVideos={
         <div className="container__videos">
@@ -57,7 +60,7 @@ const Home = () => {
                   <source src={link} type="video/mp4" />
                 </video>
               </div>
-              <div>
+              <div className="descriptions">
                 <h3>{title}</h3>
                 <p>{description}</p>
               </div>

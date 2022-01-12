@@ -11,7 +11,10 @@
   flex-direction: column;
   justify-content: center;
 
-  color: var(--colorWhite);
+  h2 {
+    color: var(--colorWhite);
+  }
+
   background: var(--ColorBackgnd2);
 
   .list {
@@ -27,12 +30,12 @@
       text-align: center;
       letter-spacing: 2px;
 
+
       cursor: pointer;
-      transition: all 0.5s;
 
       a,
       span {
-        color: var(--colorDescriptions);
+        color: var(--colorWhite);
       }
 
       span {
@@ -40,17 +43,11 @@
         margin-right: 0.5em;
       }
     }
-
-    li:hover {
-      font-weight: 700;
-      transform: scale(1.2);
-      -webkit-transform: scale(1.2);
-      background: var(--colorShadow);
-
-      a,
-      span {
-        color: var(--colorWhite);
-      }
-    }
   }
+}
+
+.Acttive {
+  font-weight: 700;
+  background: var(--colorShadow);
+  color: var(--colorWhite);
 }

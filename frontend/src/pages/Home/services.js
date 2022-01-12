@@ -6,10 +6,4 @@ class UsersServices {
   }
 }
 
-class VideosServices {
-  static listVideos() {
-    return baseApi.get("/users");
-  }
-}
-
 export default UsersServices;

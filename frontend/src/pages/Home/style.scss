@@ -1,9 +1,26 @@
+.container__table {
+  float: right;
+  width: 27vw;
+  background: #fff;
+  padding: 1em;
+  border-radius: 3%;
+  border: 1px solid;
+
+  h2 {
+    text-align: center;
+    border-bottom: 1px solid #504e4e;
+    margin-bottom: 0.5em;
+    letter-spacing: 5px;
+  }
+}
+
 table {
-  width: 38vw;
   display: inline;
 }
 
 th {
+
+  color: #c51616f2;
   width: 10vw;
   text-transform: uppercase;
 }
@@ -11,28 +28,29 @@ th {
 td {
   padding-top: 1em;
   text-align: center;
+  color: #cd3939;
 }
 
 .container__videos {
-  margin-top: 5em;
+  background: #fff;
+  width: 38vw;
+  padding: 1em;
+  border: 1px solid;
+  border-radius: 2%;
   section {
-    width: 47vw;
+    width: 37vw;
+    padding: 0.5em;
     height: 25vh;
-
-    padding: 1em;
-
     display: flex;
-    justify-content: space-around;
+
+    .descriptions {
+      margin-left: 1em;
+    }
+    
 
     h3 {
       font-weight: 700;
       margin-bottom: 0.5em;
-
-      color: var(--colorText);
-    }
-
-    p {
-      color: var(--colorText);
     }
   }
 }

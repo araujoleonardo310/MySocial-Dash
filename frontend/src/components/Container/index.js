@@ -10,7 +10,7 @@ const Container = (props) => {
       <Header title={props.section} />
       <Navbar />
       <div>
-        <div className="content">{props.DashUsers}{props.DashVideos}</div>
+        <div className="content">{props.DashUsers}{props.DashVideos}{props.content}</div>
       </div>
     </div>
   );
