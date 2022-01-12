@@ -47,25 +47,21 @@ const Home = () => {
       DashVideos={
         <div className="container__videos">
           <h2>Ultimos lançamentos</h2>
-          {users.map(({ link, title, description }) => (
-            <section>
-              <div className="video">
-                <video
-                  width="300px"
-                  loop="true"
-                  autoplay="autoplay"
-                  controls
-                  muted
-                >
-                  <source src={link} type="video/mp4" />
-                </video>
-              </div>
-              <div className="descriptions">
-                <h3>{title}</h3>
-                <p>{description}</p>
-              </div>
-            </section>
-          ))}
+          <div className="list__videos">
+            {users.map(({ link, title, description }) => (
+              <section>
+                <div className="video">
+                  <video width="300px" loop="true" controls muted>
+                    <source src={link} type="video/mp4" />
+                  </video>
+                </div>
+                <div className="descriptions">
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                </div>
+              </section>
+            ))}
+          </div>
         </div>
       }
     />
