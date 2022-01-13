@@ -1,4 +1,4 @@
-const STORAGE_KEY = [null, null];
+const STORAGE_KEY = false;
 
 const isLogged = () => !!localStorage.getItem(STORAGE_KEY);
 
@@ -8,4 +8,4 @@ const LoginSignIn = (name, typeAccont) => {
 
 const LoginOut = () => localStorage.removeItem(STORAGE_KEY);
 
-export { LoginSignIn, LoginOut, isLogged };
+export { LoginSignIn, LoginOut, isLogged, STORAGE_KEY };

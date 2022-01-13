@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import { history } from "../../components/CreateHistory";
-import { LoginSignIn } from "../../Routes/Auth";
+import { history } from "../../Root/CreateHistory";
+import { LoginSignIn } from "../../Root/Auth";
 import LoginServices from "./services";
 
 import "./style.scss";
@@ -10,13 +10,15 @@ const Login = () => {
   const [user, setUser] = useState([]);
   
 
-  const handleLoginSignIn = async () => {
+  const handleLoginSignIn = async (event) => {
+    event.preventDefault()
     const { data } = await LoginServices.login();
+
     if (
       user.email === data[0].email &&
       user.password === data[0].password 
     ) {
-      LoginSignIn(data[0].name, data[0].typeAccont);
+      LoginSignIn(true);
       history.push("/home");
     }
   };
@@ -24,7 +26,7 @@ const Login = () => {
   return (
     <div className="container__login">
       <div className="container__form">
-        <form>
+        <form onSubmit={handleLoginSignIn}>
           <label htmlFor="email">E-mail:</label>
           <input
             type="email"
@@ -42,7 +44,7 @@ const Login = () => {
             required="required"
             onChange={(e) => setUser({ ...user, password: e.target.value })}
           />
-          <button type="submit" onClick={handleLoginSignIn}>Login</button>
+          <button type="submit">Login</button>
         </form>
       </div>
     </div>

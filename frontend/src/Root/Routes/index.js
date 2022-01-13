@@ -1,16 +1,16 @@
 import React from "react";
 
 import { Router, Switch } from "react-router-dom";
-import { history } from "../components/CreateHistory";
+import { history } from "../CreateHistory";
 
-import PrivateRoute from "./PrivateRoute";
-import PublicRoute from "./PublicRoute";
+import PrivateRoute from "../PrivateRoute";
+import PublicRoute from "../PublicRoute";
 
-import Login from "../pages/Login";
-import Home from "../pages/Home";
-import Cadastro from "../pages/Cadastro";
+import Login from "../../pages/Login";
+import Home from "../../pages/Home";
+import Cadastro from "../../pages/Cadastro";
 
-const Root = () => {
+const Routes = () => {
   return (
     <Router history={history}>
       <Switch>
@@ -22,4 +22,4 @@ const Root = () => {
   );
 };
 
-export default Root;
+export default Routes;
