@@ -1,10 +1,8 @@
-const STORAGE_KEY = false;
+const STORAGE_KEY = undefined;
 
 const isLogged = () => !!localStorage.getItem(STORAGE_KEY);
 
-const LoginSignIn = (name, typeAccont) => {
-  localStorage.setItem(STORAGE_KEY, [name, typeAccont]);
-};
+const LoginSignIn = (token) => localStorage.setItem(STORAGE_KEY, token);
 
 const LoginOut = () => localStorage.removeItem(STORAGE_KEY);
 

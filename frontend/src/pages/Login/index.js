@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import "./style.scss";
 
-import { history } from "../../Root/CreateHistory";
-import { LoginSignIn } from "../../Root/Auth";
 import LoginServices from "./services";
 
-import "./style.scss";
+import { LoginSignIn } from "../../Routes/Root/Auth";
+import { history } from "../../Routes/Root/CreateHistory";
+
 
 const Login = () => {
   const [user, setUser] = useState([]);

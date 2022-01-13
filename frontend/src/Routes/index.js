@@ -1,14 +1,14 @@
 import React from "react";
 
 import { Router, Switch } from "react-router-dom";
-import { history } from "../CreateHistory";
+import { history } from "./Root/CreateHistory";
 
-import PrivateRoute from "../PrivateRoute";
-import PublicRoute from "../PublicRoute";
+import PrivateRoute from "./Root/PrivateRoute";
+import PublicRoute from "./Root/PublicRoute";
 
-import Login from "../../pages/Login";
-import Home from "../../pages/Home";
-import Cadastro from "../../pages/Cadastro";
+import Login from "../pages/Login";
+import Home from "../pages/Home";
+import Cadastro from "../pages/Cadastro";
 
 const Routes = () => {
   return (
