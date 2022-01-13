@@ -1,9 +1,10 @@
 import React from "react";
 import "./style.scss";
 
-import { AiOutlineUsergroupAdd, AiOutlineVideoCameraAdd } from "react-icons/ai";
-import { FiUsers } from "react-icons/fi";
 import { Link } from "react-router-dom";
+
+import { AiOutlineUsergroupAdd } from "react-icons/ai";
+import { FiUsers } from "react-icons/fi";
 
 const Navbar = () => {
   return (
@@ -22,12 +23,6 @@ const Navbar = () => {
             <AiOutlineUsergroupAdd />
           </span>
           <Link to={"/cadastro"}>Cadastro</Link>
-        </li>
-        <li>
-          <span>
-            <AiOutlineVideoCameraAdd />
-          </span>
-          <Link to={"/videos"}>Videos</Link>
         </li>
       </ul>
     </div>

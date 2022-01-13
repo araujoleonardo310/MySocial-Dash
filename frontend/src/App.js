@@ -1,14 +1,10 @@
 import React from "react";
-import Routes from "./routes";
-
 import "./style/global.scss";
 
+import Routes from "./Routes";
+
 const App = () => {
-  return (
-    <div>
-      <Routes />
-    </div>
-  );
+  return <Routes />;
 };
 
 export default App;

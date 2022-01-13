@@ -6,7 +6,6 @@
       "email": "teste@email.com",
       "password": "senha123",
       "typeAccont": "administrador",
-      "status": "active",
       "link": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4",
       "title": "Fatalidades da vida",
       "description": "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado."
@@ -17,7 +16,6 @@
       "email": "teste@email.com",
       "password": "senha123",
       "typeAccont": "administrador",
-      "status": "active",
       "link": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4",
       "title": "Reconciliação e amor",
       "description": "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado."

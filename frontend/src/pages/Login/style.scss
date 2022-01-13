@@ -5,8 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  background: url("../../components/assets/img/backgndLogin.jpg") no-repeat center center;
+
+  background: url("../../components/assets/img/backgndLogin.jpg") no-repeat
+    center center;
 
   .container__form {
     width: 30vw;
@@ -28,16 +29,7 @@
       font-size: 1.2em;
       letter-spacing: 2px;
     }
-
-    .typeConta {
-      display: inline;
-      margin-right: 0.5em;
-    }
-
-    select {
-      padding: 0.5em;
-    }
-
+    
     input {
       width: 100%;
 
@@ -54,17 +46,25 @@
     button {
       width: 50%;
 
+      padding: 0.5em 1em;
       margin: 2em auto;
-      padding: 1em;
 
       display: block;
 
-      font-size: 1em;
-      font-weight: 500;
+      font-size: 1.2em;
+      font-weight: 600;
 
       color: #fff;
       border: 1px solid #fff;
       background: var(--ColorBackgnd2);
+
+      transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    }
+
+    button:hover {
+      background-color: #f56b02ab;      
+      color: rgb(255, 255, 255);
+      text-shadow:rgba(0, 0, 0, 0.35);
     }
   }
 }

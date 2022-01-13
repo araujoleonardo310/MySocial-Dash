@@ -1,14 +1,9 @@
 .container__table {
-  width: 27vw;
-
+  width: 100%;
   padding: 1em;
   margin-top: 2em;
-
   border-radius: 3%;
-  border: 1px solid;
-
   overflow-y: scroll;
-
   background: #fff;
 
   h2 {
@@ -16,17 +11,16 @@
 
     text-align: center;
     letter-spacing: 5px;
-
-    border-bottom: 1px solid #504e4e;
   }
 }
 
 table {
-  display: inline;
+ padding: 2em;
+ width: 100%;
 }
 
 th {
-  width: 10vw;
+  width: 25%;
   color: #c51616f2;
   text-transform: uppercase;
 }
@@ -46,8 +40,7 @@ td {
 
   padding: 1em;
   margin-top: 2em;
-
-  border: 1px solid;
+  
   border-radius: 2%;
   background: #fff;
 

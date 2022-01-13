@@ -3,11 +3,11 @@ import "./style.scss";
 
 import Container from "../../components/Container";
 
-const Home = () => {
+const Cadastro = () => {
   return (
     <Container
-      section="Cadastro"
-      content={
+      title="Cadastro"
+      children={
         <div className="container__register">
           <form className="form">
             <div className="fildset__container">
@@ -54,4 +54,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Cadastro;
