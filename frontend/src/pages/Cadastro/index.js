@@ -3,6 +3,7 @@ import "./style.scss";
 
 import Container from "../../components/Container";
 import RegisterUsersAndVideos from "./services";
+import { Toaster } from "react-hot-toast";
 
 const Cadastro = () => {
   const [UserAndVideo, setUserAndVideo] = useState([{}]);
@@ -17,6 +18,7 @@ const Cadastro = () => {
       title="Cadastro"
       children={
         <div className="container__register">
+           <Toaster />
           <form className="form" onSubmit={handleRegister}>
             <div className="fildset__container">
               <fieldset>

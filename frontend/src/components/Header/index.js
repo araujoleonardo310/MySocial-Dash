@@ -1,16 +1,20 @@
 import React from "react";
 import "./style.scss";
 
-import { LoginOut } from "../../Routes/Root/Auth";
+import { LoginOut } from "../../Routes/Auth";
 
 import profile from "../assets/img/dogUser.jpg";
-import { history } from "../../Routes/Root/CreateHistory";
+import { useHistory } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Header = ({ title }) => {
+  const history = useHistory()
  const handleLoginOut = () => {
     LoginOut();
+    toast.success("Desconectado!")
     history.push("/");
   };
+
   return (
     <div className="header">
       <h2 className="title">{title}</h2>

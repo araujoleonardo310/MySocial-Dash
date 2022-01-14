@@ -4,6 +4,7 @@ import "./style.scss";
 import UsersServices from "./services";
 
 import Container from "../../components/Container";
+import { Toaster } from "react-hot-toast";
 
 const Home = () => {
   const [users, setUsers] = useState([]);
@@ -22,6 +23,7 @@ const Home = () => {
       title="Home"
       children={
         <>
+        <Toaster />
           <div className="container__table">
             <h2>Usuários</h2>
             <table>
