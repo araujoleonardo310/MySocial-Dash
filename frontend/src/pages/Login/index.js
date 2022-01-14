@@ -2,24 +2,19 @@ import React, { useState } from "react";
 import "./style.scss";
 
 import LoginServices from "./services";
-
-import { LoginSignIn } from "../../Routes/Root/Auth";
-import { history } from "../../Routes/Root/CreateHistory";
-
+import { useHistory } from "react-router-dom";
+import { LoginSignIn } from "../../Routes/Auth";
 
 const Login = () => {
+  const history = useHistory();
   const [user, setUser] = useState([]);
-  
 
   const handleLoginSignIn = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const { data } = await LoginServices.login();
 
-    if (
-      user.email === data[0].email &&
-      user.password === data[0].password 
-    ) {
-      LoginSignIn(true);
+    if (user.email === data[0].email && user.password === data[0].password) {
+      LoginSignIn();
       history.push("/home");
     }
   };

@@ -1,25 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-import { Router, Switch } from "react-router-dom";
-import { history } from "./Root/CreateHistory";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import PrivateRoute from "./Root/PrivateRoute";
-import PublicRoute from "./Root/PublicRoute";
-
-import Login from "../pages/Login";
 import Home from "../pages/Home";
+import Login from "../pages/Login";
 import Cadastro from "../pages/Cadastro";
 
 const Routes = () => {
+  const token = localStorage.getItem("token");
+
   return (
-    <Router history={history}>
+    <Router>
       <Switch>
-        <PublicRoute exact path="/" component={Login} />
-        <PrivateRoute exact path="/home" component={Home} />
-        <PrivateRoute exact path="/cadastro" component={Cadastro} />
+        <Route exact path="/" component={Login} />
+        {token && <Route exact path="/home" component={Home} />}
+        {token && <Route exact path="/cadastro" component={Cadastro} />}
       </Switch>
     </Router>
   );
 };
-
 export default Routes;

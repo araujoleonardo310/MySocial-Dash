@@ -1,14 +1,10 @@
 import React from "react";
 import "./style.scss";
 
-import { LoginOut } from "../../Routes/Root/Auth";
-
 import profile from "../assets/img/dogUser.jpg";
-import { history } from "../../Routes/Root/CreateHistory";
 
 const Header = ({ title }) => {
- const handleLoginOut = () => {
-    LoginOut();
+  const handleLoginOut = () => {
     history.push("/");
   };
   return (
