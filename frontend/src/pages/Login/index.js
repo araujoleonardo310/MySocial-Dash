@@ -3,12 +3,14 @@ import "./style.scss";
 
 import LoginServices from "./services";
 
-import { LoginSignIn } from "../../Routes/Auth";
+import { LABEL_LOCAL_STORAGE } from "../../Routes/Auth";
 import { useHistory } from "react-router-dom";
 
 import { Toaster, toast } from "react-hot-toast";
 
 const Login = () => {
+  const LoginSignIn = (typeAccont) => localStorage.setItem(LABEL_LOCAL_STORAGE, typeAccont);
+  
   const history = useHistory();
   const [user, setUser] = useState([]);
 
@@ -21,7 +23,7 @@ const Login = () => {
     );
 
     if (resp.length !== 0) {
-      LoginSignIn();
+      LoginSignIn(resp[0].typeAccont);
       toast.success("Bem-Vindo(a).");
       history.push("/home");
     } else {

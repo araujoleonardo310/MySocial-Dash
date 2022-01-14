@@ -23,7 +23,6 @@ const Home = () => {
       title="Home"
       children={
         <>
-        <Toaster />
           <div className="container__table">
             <h2>Usuários</h2>
             <table>

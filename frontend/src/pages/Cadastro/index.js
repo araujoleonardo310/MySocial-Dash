@@ -18,7 +18,6 @@ const Cadastro = () => {
       title="Cadastro"
       children={
         <div className="container__register">
-           <Toaster />
           <form className="form" onSubmit={handleRegister}>
             <div className="fildset__container">
               <fieldset>
