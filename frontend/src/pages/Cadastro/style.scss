@@ -1,14 +1,15 @@
 .container__register {
   button {
     width: 8em;
+    margin-left: 17em;
 
     bottom: 1em;
-    margin-left: 17em;
     position: relative;
 
     font-weight: 600;
-
-    background: #adf5ee;
+    
+    border: none;
+    background: #b1ecf5;
   }
 
   form {

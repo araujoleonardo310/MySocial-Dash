@@ -50,9 +50,9 @@ const Home = () => {
             <h2>Ultimos lançamentos</h2>
             <div className="list__videos">
               {users.map(({ id, link, title, description }) => (
-                <section key={id}>
+                <section key={id} className="card-videos">
                   <div className="video">
-                    <video width="300px" loop="true" controls muted>
+                    <video loop="true" controls muted className="video-styled">
                       <source src={link} type="video/mp4" />
                     </video>
                   </div>
