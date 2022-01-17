@@ -5,15 +5,15 @@ import "./style.scss";
 import toast from "react-hot-toast";
 
 import { LoginOut } from "../../Routes/Auth";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Header = ({ title }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleLoginOut = () => {
-    LoginOut();
+    /* LoginOut(); */
     toast.success("Desconectado!");
-    history.push("/");
+    navigate.push('/home')
   };
 
   return (

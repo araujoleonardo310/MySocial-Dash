@@ -3,19 +3,17 @@ import "./style.scss";
 
 import LoginServices from "./services";
 
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { LoginSignIn } from "../../Routes/Auth";
 import { Toaster, toast } from "react-hot-toast";
 
-
 const Login = () => {
-  
-  const history = useHistory();
+  const navigate = useNavigate();
   const [user, setUser] = useState([]);
 
   const handleLoginSignIn = async (event) => {
     event.preventDefault();
-    
+
     const { data } = await LoginServices.login();
 
     const resp = data.filter(
@@ -23,9 +21,9 @@ const Login = () => {
     );
 
     if (resp.length !== 0) {
-      LoginSignIn();
+      /* LoginSignIn(); */
       toast.success("Bem-Vindo(a).");
-      history.push("/home");
+      navigate.push('/home')
     } else {
       toast.error("Verifique os dados informados.");
     }

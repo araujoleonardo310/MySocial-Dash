@@ -1,22 +1,22 @@
 import React from "react";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Cadastro from "../pages/Cadastro";
+import PageNotFound from "../pages/PageNotFound";
 
-const Routes = () => {
-  const token = localStorage.getItem("token");
-
+const MyRoutes = () => {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Login} />
-        {token && <Route exact path="/home" component={Home} />}
-        {token && <Route exact path="/cadastro" component={Cadastro} />}
-      </Switch>
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Login />} />
+        <Route exact path="/home" element={<Home />} />
+        <Route exact path="/cadastro" element={<Cadastro />} />
+        <Route exact path="/:pageName" element={<PageNotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
-export default Routes;
+export default MyRoutes;
