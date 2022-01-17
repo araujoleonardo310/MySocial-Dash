@@ -8,12 +8,10 @@
 
 :root {
   --colorContainer: #f3f5fa;
-  --colorBlack: #171723;
   --colorWhite: #fff;
+  --colorDark: #020f2e;
   --colorShadow: #1e1f28;
-  --colorBackgnd: #f4f5fc;
   --ColorBackgnd2: #f56d02;
-  --colorTitles: #020f2e;
   --colorDescriptions: #073499;
 }
 
@@ -30,7 +28,7 @@ body {
 
 h2 {
   font-size: 1.7em;
-  color: #020f2e;
+  color: var(--colorDark);
 }
 
 button {

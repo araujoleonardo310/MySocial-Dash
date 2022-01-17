@@ -3,19 +3,19 @@ import "./style.scss";
 
 import LoginServices from "./services";
 
-import { LABEL_LOCAL_STORAGE } from "../../Routes/Auth";
 import { useHistory } from "react-router-dom";
-
+import { LoginSignIn } from "../../Routes/Auth";
 import { Toaster, toast } from "react-hot-toast";
 
+
 const Login = () => {
-  const LoginSignIn = (typeAccont) => localStorage.setItem(LABEL_LOCAL_STORAGE, typeAccont);
   
   const history = useHistory();
   const [user, setUser] = useState([]);
 
   const handleLoginSignIn = async (event) => {
     event.preventDefault();
+    
     const { data } = await LoginServices.login();
 
     const resp = data.filter(
@@ -23,7 +23,7 @@ const Login = () => {
     );
 
     if (resp.length !== 0) {
-      LoginSignIn(resp[0].typeAccont);
+      LoginSignIn();
       toast.success("Bem-Vindo(a).");
       history.push("/home");
     } else {

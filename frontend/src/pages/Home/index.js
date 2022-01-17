@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./style.scss";
 
 import UsersServices from "./services";
-
 import Container from "../../components/Container";
-import { Toaster } from "react-hot-toast";
+
 
 const Home = () => {
   const [users, setUsers] = useState([]);
