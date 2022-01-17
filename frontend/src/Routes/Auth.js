@@ -1,9 +1,18 @@
-localStorage.setItem("userToken")
+const tokenName = "userToken";
 
-/* ;
+const userToken = {
+  id: 0,
+  name: "",
+  active: "false",
+  typeAccont: "administrador",
+};
 
-const LoginSignIn = () => localStorage.setItem(LABEL_LOCAL_STORAGE, true);
+const LocalStorage = localStorage.setItem(tokenName, JSON.stringify(userToken));
 
-const LoginOut = () => localStorage.removeItem(LABEL_LOCAL_STORAGE);
+const setToken = (dataToken) => {
+  localStorage.setItem(tokenName, JSON.stringify(dataToken));
+};
 
-export { LoginOut, LoginSignIn }; */
+const getToken = (token) => JSON.parse(localStorage.getItem(token));
+
+export { getToken, setToken };

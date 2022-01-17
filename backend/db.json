@@ -4,6 +4,7 @@
       "id": 1,
       "name": "teste",
       "email": "teste@email.com",
+      "active": "true",
       "password": "senha123",
       "typeAccont": "administrador",
       "link": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4",
@@ -13,8 +14,8 @@
     {
       "id": 2,
       "name": "teste",
-      "email": "teste@email.com",
-      "password": "senha123",
+      "email": "testa@email.com",
+      "password": "senha",
       "typeAccont": "administrador",
       "link": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4",
       "title": "Fatalidades da vida",

@@ -11,7 +11,7 @@ const Header = ({ title }) => {
 
   const handleLoginOut = () => {
     toast.success("Desconectado!");
-    navigate.push('/home')
+    navigate('/home')
   };
 
   return (

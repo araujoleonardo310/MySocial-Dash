@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./style.scss";
 
 import LoginServices from "./services";
-
+import { setToken } from "../../Routes/Auth";
 import { useNavigate } from "react-router-dom";
 import { Toaster, toast } from "react-hot-toast";
 
@@ -20,9 +20,9 @@ const Login = () => {
     );
 
     if (resp.length !== 0) {
-      /* LoginSignIn(); */
+      setToken(resp);
       toast.success("Bem-Vindo(a).");
-      navigate.push('/home')
+      navigate("/home");
     } else {
       toast.error("Verifique os dados informados.");
     }
