@@ -1,4 +1,6 @@
-/* const LABEL_LOCAL_STORAGE = "token";
+localStorage.setItem("userToken")
+
+/* ;
 
 const LoginSignIn = () => localStorage.setItem(LABEL_LOCAL_STORAGE, true);
 

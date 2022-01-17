@@ -4,14 +4,12 @@ import "./style.scss";
 
 import toast from "react-hot-toast";
 
-import { LoginOut } from "../../Routes/Auth";
 import { useNavigate } from "react-router-dom";
 
 const Header = ({ title }) => {
   const navigate = useNavigate();
 
   const handleLoginOut = () => {
-    /* LoginOut(); */
     toast.success("Desconectado!");
     navigate.push('/home')
   };

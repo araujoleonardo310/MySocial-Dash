@@ -4,7 +4,6 @@ import "./style.scss";
 import LoginServices from "./services";
 
 import { useNavigate } from "react-router-dom";
-import { LoginSignIn } from "../../Routes/Auth";
 import { Toaster, toast } from "react-hot-toast";
 
 const Login = () => {
