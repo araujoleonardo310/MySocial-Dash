@@ -21,26 +21,15 @@ const routes = () => {
 
   const getToken = () => JSON.parse(localStorage.getItem("token"));
   const { tipo, status } = getToken();
-  console.log(tipo, status);
+  
 
   return (
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Login />} />
-
-        {status === "active" ? (
-          <Route exact path="/" element={<Login />} />
-        ) : (
-          <Route exact path="/home" element={<Home />} />
-        )}
-
-        {tipo === "admin" ? (
-          <Route exact path="/cadastro" element={<Cadastro />} />
-        ) : (
-          <Route exact path="/" element={<Login />} />
-        )}
-
-        <Route exact path="/:pageName" element={<PageNotFound />} />
+        <Route exact path="/home" element={<Home />} />
+        <Route exact path="/cadastro" element={<Cadastro />} />
+        <Route path="/:pageName" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );

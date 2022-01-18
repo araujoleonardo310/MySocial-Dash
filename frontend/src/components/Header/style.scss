@@ -33,14 +33,17 @@
     display: flex;
     position: relative;
     align-items: center;
-    justify-content: end;    
+    justify-content: end;
 
     p {
+      width: 100%;
       margin-right: 0.2rem;
+
       font-size: 1.2em;
-      color: var(--colorShadow);
       font-weight: 500;
       text-shadow: 0 0 black;
+
+      color: var(--colorShadow);
     }
   }
 

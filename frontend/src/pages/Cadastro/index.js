@@ -1,19 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
 
-
-
-import Container from "../../components/Container";
 import RegisterUsersAndVideos from "./services";
+import Container from "../../components/Container";
 
 const Cadastro = () => {
   const [UserAndVideo, setUserAndVideo] = useState([{}]);
 
   const handleRegister = async (event) => {
     event.preventDefault();
-    const { data } = await RegisterUsersAndVideos.register(UserAndVideo);
-    console.log(data);
+    await RegisterUsersAndVideos.register(UserAndVideo);
   };
+  
   return (
     <Container title="Cadastro">
       <div className="container__register">
@@ -30,6 +28,7 @@ const Cadastro = () => {
                 onChange={(e) =>
                   setUserAndVideo({ ...UserAndVideo, name: e.target.value })
                 }
+                required
               />
 
               <label htmlFor="email">E-mail</label>
@@ -39,6 +38,7 @@ const Cadastro = () => {
                 onChange={(e) =>
                   setUserAndVideo({ ...UserAndVideo, email: e.target.value })
                 }
+                required
               />
 
               <div>
@@ -67,6 +67,7 @@ const Cadastro = () => {
                     password: e.target.value,
                   })
                 }
+                required
               />
             </fieldset>
           </div>
@@ -83,6 +84,7 @@ const Cadastro = () => {
                 onChange={(e) =>
                   setUserAndVideo({ ...UserAndVideo, url: e.target.value })
                 }
+                required
               />
               <label htmlFor="title">Título</label>
               <input
@@ -91,6 +93,7 @@ const Cadastro = () => {
                 onChange={(e) =>
                   setUserAndVideo({ ...UserAndVideo, title: e.target.value })
                 }
+                required
               />
               <label htmlFor="description">Descrição</label>
               <input
@@ -101,6 +104,7 @@ const Cadastro = () => {
                     description: e.target.value,
                   })
                 }
+                required
               />
             </fieldset>
           </div>

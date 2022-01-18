@@ -2,15 +2,15 @@ import React from "react";
 import "./style.scss";
 
 import toast from "react-hot-toast";
+import profile from "../assets/img/dogUser.jpg";
 
 import { useNavigate, useLocation } from "react-router-dom";
 
-import profile from "../assets/img/dogUser.jpg";
 
 const Header = (props) => {
+  const user = new URLSearchParams(useLocation().search);
   const navigate = useNavigate();
 
-  const user = new URLSearchParams(useLocation().search);
 
   const handleLoginOut = () => {
     localStorage.setItem(
