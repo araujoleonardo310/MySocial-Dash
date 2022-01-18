@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./style.scss";
 
+
+
 import Container from "../../components/Container";
 import RegisterUsersAndVideos from "./services";
 
@@ -46,12 +48,12 @@ const Cadastro = () => {
                   onChange={(e) =>
                     setUserAndVideo({
                       ...UserAndVideo,
-                      typeAccont: e.target.value,
+                      tipo: e.target.value,
                     })
                   }
                 >
-                  <option value="administrador">Administrdor</option>
-                  <option value="usuario">Usuário</option>
+                  <option value="admin">Administrdor</option>
+                  <option value="user">Usuário</option>
                 </select>
               </div>
 
@@ -74,12 +76,12 @@ const Cadastro = () => {
               <legend>Adicionar Vídeos</legend>
               <button className="submit">Enviar</button>
 
-              <label htmlFor="link">Video</label>
+              <label htmlFor="url">Video</label>
               <input
                 type="url"
-                id="link"
+                id="url"
                 onChange={(e) =>
-                  setUserAndVideo({ ...UserAndVideo, link: e.target.value })
+                  setUserAndVideo({ ...UserAndVideo, url: e.target.value })
                 }
               />
               <label htmlFor="title">Título</label>

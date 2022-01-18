@@ -4,10 +4,9 @@
       "id": 1,
       "name": "teste",
       "email": "teste@email.com",
-      "active": "true",
       "password": "senha123",
-      "typeAccont": "administrador",
-      "link": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4",
+      "tipo": "user",
+      "url": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4",
       "title": "Fatalidades da vida",
       "description": "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado."
     },
@@ -16,8 +15,8 @@
       "name": "teste",
       "email": "testa@email.com",
       "password": "senha",
-      "typeAccont": "administrador",
-      "link": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4",
+      "tipo": "admin",
+      "url": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4",
       "title": "Fatalidades da vida",
       "description": "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado."
     }

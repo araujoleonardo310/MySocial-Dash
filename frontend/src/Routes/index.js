@@ -2,29 +2,44 @@ import React from "react";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { getToken } from "./Auth";
-
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Cadastro from "../pages/Cadastro";
 import PageNotFound from "../pages/PageNotFound";
 
 const routes = () => {
+  let tokenValues = {
+    name: "token",
+    tipo: "not",
+    status: "disable",
+  };
 
-  const token = getToken  
-  
+  const setToken = (values) => {
+    localStorage.setItem("token", JSON.stringify(values));
+  };
+  setToken(tokenValues);
+
+  const getToken = () => JSON.parse(localStorage.getItem("token"));
+  const { tipo, status } = getToken();
+  console.log(tipo, status);
+
   return (
     <BrowserRouter>
       <Routes>
-        {token && (
+        <Route exact path="/" element={<Login />} />
+
+        {status === "active" ? (
           <Route exact path="/" element={<Login />} />
-        )}
-        {!!token && (
+        ) : (
           <Route exact path="/home" element={<Home />} />
         )}
-        {token.typeAccont === "administrador" && (
+
+        {tipo === "admin" ? (
           <Route exact path="/cadastro" element={<Cadastro />} />
+        ) : (
+          <Route exact path="/" element={<Login />} />
         )}
+
         <Route exact path="/:pageName" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
