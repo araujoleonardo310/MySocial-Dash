@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.scss";
 
 import toast from "react-hot-toast";
@@ -13,13 +13,15 @@ const Header = (props) => {
 
 
   const handleLoginOut = () => {
-    localStorage.setItem(
-      "token",
-      JSON.stringify({ name: "token", tipo: "null", status: "disable" })
-    );
+    localStorage.clear()
     toast.success("Desconectado!");
     navigate("/");
   };
+
+  useEffect(() => {
+    localStorage.clear()
+    
+  }, [])
 
   return (
     <div className="header">
