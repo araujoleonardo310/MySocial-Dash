@@ -19,6 +19,16 @@
       "url": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4",
       "title": "Fatalidades da vida",
       "description": "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado."
+    },
+    {
+      "id": 3,
+      "name": "Leonardo Araújo",
+      "email": "araujoleonardo310@email.com",
+      "password": "leo123",
+      "tipo": "admin",
+      "url": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4",
+      "title": "Amizade é vida",
+      "description": "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado."
     }
   ]
 }

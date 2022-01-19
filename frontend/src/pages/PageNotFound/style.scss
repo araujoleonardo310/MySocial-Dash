@@ -3,6 +3,7 @@
   height: 100vh;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
@@ -15,5 +16,25 @@
 
     color: var(--colorDark);
     text-shadow: 0 0 var(--colorDark);
+  }
+
+  button {
+    width: 12%;
+
+    margin-top: 1em;
+    padding: 0.5rem;
+
+    font-weight: 600;
+
+    border-radius: 3px;
+    border: 1px solid var(--colorWhite);
+
+    background: #f56d02;
+    color: var(--colorDark);
+  }
+
+  button:hover {
+    background: #f56d02cc;
+    color: #fff;
   }
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./style.scss";
 
 import LoginServices from "./services";
@@ -46,6 +46,7 @@ const Login = () => {
     const { data } = await LoginServices.login();
     return Validation(data);
   };
+
 
   return (
     <div className="container__login">
