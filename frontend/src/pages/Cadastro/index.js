@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./style.scss";
+
+import toast, { Toaster } from "react-hot-toast";
 
 import RegisterUsersAndVideos from "./services";
 import Container from "../../components/Container";
@@ -7,13 +9,39 @@ import Container from "../../components/Container";
 const Cadastro = () => {
   const [UserAndVideo, setUserAndVideo] = useState([{}]);
 
+  const Validation = async (dbUsers) => {
+    const resp = dbUsers.filter(
+      (item) =>
+        item.email === UserAndVideo.email 
+    );
+
+    console.log(resp)
+
+    if (!resp.length) {
+      toast.success("Dados enviado!");
+      await RegisterUsersAndVideos.register(UserAndVideo);
+      console.log("OKAY")
+      return;
+    } else {
+      toast.error("Verifique os dados informados.");
+      console.log("ERROR")
+      return;
+    }
+  };
+
+  
+
   const handleRegister = async (event) => {
     event.preventDefault();
-    await RegisterUsersAndVideos.register(UserAndVideo);
+
+    const { data } = await RegisterUsersAndVideos.dbUsers();
+
+    Validation(data, UserAndVideo);
   };
-  
+
   return (
     <Container title="Cadastro">
+      <Toaster />
       <div className="container__register">
         <form className="form" onSubmit={handleRegister}>
           <div className="fildset__container">
@@ -28,17 +56,19 @@ const Cadastro = () => {
                 onChange={(e) =>
                   setUserAndVideo({ ...UserAndVideo, name: e.target.value })
                 }
-                required
+                autoComplete="username"
+                required="required"
               />
 
               <label htmlFor="email">E-mail</label>
               <input
                 type="email"
-                id="name"
+                id="user"
                 onChange={(e) =>
                   setUserAndVideo({ ...UserAndVideo, email: e.target.value })
                 }
-                required
+                autoComplete="username"
+                required="required"
               />
 
               <div>
@@ -67,7 +97,8 @@ const Cadastro = () => {
                     password: e.target.value,
                   })
                 }
-                required
+                autoComplete="new-password"
+                required="required"
               />
             </fieldset>
           </div>
@@ -84,7 +115,8 @@ const Cadastro = () => {
                 onChange={(e) =>
                   setUserAndVideo({ ...UserAndVideo, url: e.target.value })
                 }
-                required
+                autoComplete="url"
+                required="required"
               />
               <label htmlFor="title">Título</label>
               <input
@@ -93,7 +125,7 @@ const Cadastro = () => {
                 onChange={(e) =>
                   setUserAndVideo({ ...UserAndVideo, title: e.target.value })
                 }
-                required
+                required="required"
               />
               <label htmlFor="description">Descrição</label>
               <input
@@ -104,7 +136,7 @@ const Cadastro = () => {
                     description: e.target.value,
                   })
                 }
-                required
+                required="required"
               />
             </fieldset>
           </div>

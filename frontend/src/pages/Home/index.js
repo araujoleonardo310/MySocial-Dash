@@ -6,7 +6,7 @@ import Container from "../../components/Container";
 
 const Home = () => {
   const [users, setUsers] = useState([]);
-
+  
   const GetUsers = async () => {
     const { data } = await UsersServices.listUsers();
     setUsers(data);

@@ -1,14 +1,19 @@
 import React from "react";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { AuthToken } from "./AuthToken";
 import { PrivateRoute } from "./PrivateRote";
+import { PrivateRouteAdmin } from "./PrivateRoteAdmin";
 
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Cadastro from "../pages/Cadastro";
 import PageNotFound from "../pages/PageNotFound";
 
-const routes = () => {
+const routes = () => { 
+  AuthToken()
+
   return (
     <BrowserRouter>
       <Routes>
@@ -24,9 +29,9 @@ const routes = () => {
         <Route
           path="/cadastro"
           element={
-            <PrivateRoute redirecTo={"/home"}>
+            <PrivateRouteAdmin redirecTo={"/home"}>
               <Cadastro />
-            </PrivateRoute>
+            </PrivateRouteAdmin>
           }
         />
         <Route path="/:pageName" element={<PageNotFound />} />
