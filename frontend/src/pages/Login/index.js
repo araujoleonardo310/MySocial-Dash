@@ -1,28 +1,23 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./style.scss";
 
 import LoginServices from "./services";
 
 import { useNavigate } from "react-router-dom";
 import { Toaster, toast } from "react-hot-toast";
+import { AuthContext } from "../../Context";
 
 const Login = () => {
   const navigate = useNavigate();
+
+  const { setUsername, setTypeUser, setStatusUser } =
+    useContext(AuthContext);
+
   const [user, setUser] = useState([]);
-   
 
-  function setLocalStage(valueTipo) {
-    let token = {
-      status: "active",
-      tipo: valueTipo,
-    };
-    return localStorage.setItem("token", JSON.stringify(token));
-  }
-
-  function postParamsAndToast(name, tipo) {
-    setLocalStage(tipo)
+  function postParamsAndToast(name) {
     toast.success(`Bem-Vindo(a), ${name}`);
-    navigate(`/home?name=${name}`);
+    navigate(`/home`);
   }
 
   function Validation(db_users) {
@@ -32,8 +27,10 @@ const Login = () => {
 
     if (resp.length !== 0) {
       const { name, tipo } = resp[0];
-      console.log(name, tipo);
-      postParamsAndToast(name, tipo);
+      setUsername(name);
+      setTypeUser(tipo);
+      setStatusUser("active");
+      postParamsAndToast(name);
       return;
     } else {
       toast.error("Verifique os dados informados.");
@@ -46,7 +43,6 @@ const Login = () => {
     const { data } = await LoginServices.login();
     return Validation(data);
   };
-
 
   return (
     <div className="container__login">

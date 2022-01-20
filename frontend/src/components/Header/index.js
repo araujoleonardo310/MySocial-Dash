@@ -1,34 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import "./style.scss";
 
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import profile from "../assets/img/dogUser.jpg";
 
-import { useNavigate, useLocation } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Context";
 
 const Header = (props) => {
-  const user = new URLSearchParams(useLocation().search);
+  const { username, setUsername, setTypeUser, setStatusUser } =
+    useContext(AuthContext);
+
   const navigate = useNavigate();
 
-
   const handleLoginOut = () => {
-    localStorage.clear()
-    toast.success("Desconectado!");
+    setUsername("notUser");
+    setTypeUser("null");
+    setStatusUser("disable");
     navigate("/");
   };
 
-  useEffect(() => {
-    localStorage.clear()
-    
-  }, [])
-
   return (
     <div className="header">
+      <Toaster />
       <h2 className="title">{props.title}</h2>
       <div className="profileAndLogOut">
-
-        <p>Hello, {user.get("name")}. How's going?</p>
+        <p>Olá, {username}. Como você está?</p>
         <img src={profile} alt="Profile" className="profile" />
 
         <button onClick={handleLoginOut}>Sair</button>

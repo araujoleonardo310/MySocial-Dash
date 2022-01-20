@@ -4,7 +4,6 @@ import "./style.scss";
 import UsersServices from "./services";
 import Container from "../../components/Container";
 
-
 const Home = () => {
   
   const [users, setUsers] = useState([]);
