@@ -11,20 +11,11 @@ import PageNotFound from "../pages/PageNotFound";
 
 
 const Roots = () => {
-  const { username, typeUser, statusUser } = useContext(AuthContext);
-  console.log(
-    "username",
-    username,
-    "typeUser",
-    typeUser,
-    "statusUser",
-    statusUser
-  );
+  const {  typeUser, statusUser } = useContext(AuthContext);  
 
   return (
     <BrowserRouter>
       <Routes>
-
         <Route path="/" element={<Login />} />
 
         <Route

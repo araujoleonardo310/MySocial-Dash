@@ -3,9 +3,9 @@ import "./style.scss";
 
 import LoginServices from "./services";
 
+import { AuthContext } from "../../Context";
 import { useNavigate } from "react-router-dom";
 import { Toaster, toast } from "react-hot-toast";
-import { AuthContext } from "../../Context";
 
 const Login = () => {
   const navigate = useNavigate();

@@ -1,18 +1,16 @@
 import React from "react";
+
 import "./style.scss";
 
 import Header from "../Header";
 import Navbar from "../Navbar";
 
-
-const Container = (props) => {
+const Container = ({title, children}) => {
   return (
-    <div className="container">     
-      <Header title={props.title} />
+    <div className="container">
+      <Header title={title}/>
       <Navbar />
-      <div>
-        <div className="content">{props.children}</div>
-      </div>
+      <div className="childrens">{children}</div>
     </div>
   );
 };

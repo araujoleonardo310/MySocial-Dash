@@ -16,12 +16,10 @@ const Cadastro = () => {
         item.email === UserAndVideo.email 
     );
 
-    console.log(resp)
-
     if (!resp.length) {
       toast.success("Dados enviado!");
       await RegisterUsersAndVideos.register(UserAndVideo);
-      console.log("OKAY")
+      console.log("Registration!")
       return;
     } else {
       toast.error("Verifique os dados informados.");
@@ -34,9 +32,7 @@ const Cadastro = () => {
 
   const handleRegister = async (event) => {
     event.preventDefault();
-
     const { data } = await RegisterUsersAndVideos.dbUsers();
-
     Validation(data, UserAndVideo);
   };
 

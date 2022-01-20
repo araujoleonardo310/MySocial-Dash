@@ -1,11 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
 
 import UsersServices from "./services";
 import Container from "../../components/Container";
 
 const Home = () => {
-  
   const [users, setUsers] = useState([]);
 
   const GetUsers = async () => {
@@ -19,7 +18,6 @@ const Home = () => {
 
   return (
     <Container title="Home">
-      <>
         <div className="container__table">
           <h2>Usuários</h2>
           <table>
@@ -62,7 +60,6 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </>
     </Container>
   );
 };

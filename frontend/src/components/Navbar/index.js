@@ -3,8 +3,8 @@ import "./style.scss";
 
 import { Link } from "react-router-dom";
 
-import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import { FiUsers } from "react-icons/fi";
+import { AiOutlineUsergroupAdd } from "react-icons/ai";
 
 const Navbar = () => {
   return (
