@@ -13,7 +13,7 @@ const PageNotFound = () => {
   return (
     <div className="PageNotFound">
       <div className="container">
-        <p><span>"{params.pageName}"</span> não foi encontrada! 😓</p>
+       <span>"{params.pageName}"</span><p>não foi encontrada! 😓</p>
         <button onClick={handleReturn} className="btn">desejar voltar?</button>
       </div>
     </div>

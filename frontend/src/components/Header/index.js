@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import "./style.scss";
 
-import { Toaster } from "react-hot-toast";
+import { BiLogOut } from "react-icons/bi";
+import toast, { Toaster } from "react-hot-toast";
 import { AuthContext } from "../../Context";
 import { useNavigate } from "react-router-dom";
 
@@ -14,6 +15,7 @@ const Header = ({ title }) => {
     useContext(AuthContext);
 
   const handleLoginOut = () => {
+    toast.success("Desconectado!")
     setUsername("notUser");
     setTypeUser("null");
     setStatusUser("disable");
@@ -25,9 +27,9 @@ const Header = ({ title }) => {
       <Toaster />
       <h2 className="title">{title}</h2>
       <div className="profileAndLogOut">
-        <p>Olá, {username}. Como você está?</p>
-        <img src={profile} alt="Profile" className="profile" />
-        <button onClick={handleLoginOut}>Sair</button>
+        <p>Olá, {username}. Como você está? <img src={profile} alt="Profile" className="profile" /></p>
+       
+        <button onClick={handleLoginOut}><BiLogOut /></button>
       </div>
     </div>
   );

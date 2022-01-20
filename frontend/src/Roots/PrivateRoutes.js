@@ -1,6 +1,6 @@
 import { Navigate } from "react-router-dom";
 
-export const PrivateRoute = ({statusUser,  children, redirecTo,  Navigate}) => {
+export const PrivateRoute = ({statusUser,  children, redirecTo}) => {
   let isAuth = statusUser !== "disable";
   return isAuth ? children : <Navigate to={redirecTo} />;
 };

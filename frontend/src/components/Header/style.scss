@@ -11,19 +11,6 @@
     margin-left: 1em;
   }
 
-  button {
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    transition: all 0.2s ease-in-out;
-  }
-
-  button:hover {
-    transform: scale(1.1);
-
-    color: var(--colorWhite);
-    background: var(--colorShadow);
-  }
-
   .profileAndLogOut {
     width: 50%;
 
@@ -37,19 +24,25 @@
 
     p {
       width: 100%;
-      margin-right: 0.2rem;
 
       font-size: 1.2em;
       font-weight: 500;
-      text-shadow: 0 0 black;
+      text-shadow: #000;
+
+      display: contents;
 
       color: var(--colorShadow);
+    }
+
+    button {
+      border: none;
+      background: none;
+      font-size: 1.5rem;
     }
   }
 
   .profile {
     width: 50px;
-    margin-right: 0.8rem;
-    border-radius: 100%;
+    border: none;
   }
 }
