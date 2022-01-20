@@ -10,31 +10,30 @@
   background: url("../../components/assets/img/backgndLogin.jpg") no-repeat
     center center;
 
-  p {
-    font-size: 1.5em;
-    font-weight: 600;
+  .container {
+    width: 30vw;
+    height: 40vh;
 
-    color: var(--colorDark);
-    text-shadow: 0 0 var(--colorDark);
-  }
+    padding: 4em 2em;
 
-  button {
-    width: 12%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
-    margin-top: 1em;
-    padding: 0.5rem;
+    border-radius: 2%;
 
-    font-weight: 600;
+    background: #fbf7f794;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-    border-radius: 3px;
-    border: 1px solid var(--colorWhite);
+    span {
+      color: #1a33af;
+      font-weight: 600;
+    }
 
-    background: #f56d02;
-    color: var(--colorDark);
-  }
+    p {
+      font-size: 1.5rem;
+    }
 
-  button:hover {
-    background: #f56d02cc;
-    color: #fff;
   }
 }

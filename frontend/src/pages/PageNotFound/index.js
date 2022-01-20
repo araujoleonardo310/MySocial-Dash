@@ -12,10 +12,10 @@ const PageNotFound = () => {
   }
   return (
     <div className="PageNotFound">
-      <p>
-        "{params.pageName}" não encontrada!{" "}
-      </p>
-        <button onClick={handleReturn}>desejar voltar?</button>
+      <div className="container">
+        <p><span>"{params.pageName}"</span> não foi encontrada! 😓</p>
+        <button onClick={handleReturn} className="btn">desejar voltar?</button>
+      </div>
     </div>
   );
 };
