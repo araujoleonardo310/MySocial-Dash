@@ -1,7 +1,7 @@
 export const AuthToken = () => {
   let tokenValues = {
-    status: "disable",
-    tipo: "notuser",
+    status: "active",
+    tipo: "user",
   };
 
   const token = localStorage.setItem(

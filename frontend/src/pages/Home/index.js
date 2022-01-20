@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./style.scss";
 
 import UsersServices from "./services";
 import Container from "../../components/Container";
 
+
 const Home = () => {
-  const [users, setUsers] = useState([]);
   
+  const [users, setUsers] = useState([]);
+
   const GetUsers = async () => {
     const { data } = await UsersServices.listUsers();
     setUsers(data);

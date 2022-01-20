@@ -1,8 +1,14 @@
 import React from "react";
-import Routes from "./Routes";
+import AuthProvider from "./Context";
+import Roots from "./Roots";
 
 const App = () => {
-  return <Routes />;
+  
+  return (
+    <AuthProvider>
+      <Roots />
+    </AuthProvider>
+  )
 };
 
 export default App;

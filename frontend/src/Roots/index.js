@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { AuthToken } from "./AuthToken";
+import { AuthContext } from "../Context";
+
+import { AuthToken } from "./TokenStorage";
 import { PrivateRoute } from "./PrivateRote";
 import { PrivateRouteAdmin } from "./PrivateRoteAdmin";
 
@@ -11,8 +13,13 @@ import Login from "../pages/Login";
 import Cadastro from "../pages/Cadastro";
 import PageNotFound from "../pages/PageNotFound";
 
-const routes = () => { 
-  AuthToken()
+const Roots = () => {
+  const {username,
+    typeUser,
+    statusUser} = useContext(AuthContext);
+  console.log("username", username, "typeUser", typeUser, "statusUser", statusUser)
+
+  AuthToken();
 
   return (
     <BrowserRouter>
@@ -39,4 +46,4 @@ const routes = () => {
     </BrowserRouter>
   );
 };
-export default routes;
+export default Roots;

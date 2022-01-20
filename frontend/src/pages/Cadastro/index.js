@@ -7,6 +7,7 @@ import RegisterUsersAndVideos from "./services";
 import Container from "../../components/Container";
 
 const Cadastro = () => {
+
   const [UserAndVideo, setUserAndVideo] = useState([{}]);
 
   const Validation = async (dbUsers) => {
