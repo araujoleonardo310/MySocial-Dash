@@ -3,6 +3,9 @@ import "./style.scss";
 
 import LoginServices from "./services";
 
+import { MdAlternateEmail } from "react-icons/md";
+import { RiLockPasswordLine } from "react-icons/ri";
+
 import { AuthContext } from "../../Context";
 import { useNavigate } from "react-router-dom";
 import { Toaster, toast } from "react-hot-toast";
@@ -10,8 +13,7 @@ import { Toaster, toast } from "react-hot-toast";
 const Login = () => {
   const navigate = useNavigate();
 
-  const { setUsername, setTypeUser, setStatusUser } =
-    useContext(AuthContext);
+  const { setUsername, setTypeUser, setStatusUser } = useContext(AuthContext);
 
   const [user, setUser] = useState([]);
 
@@ -49,25 +51,30 @@ const Login = () => {
       <Toaster />
       <div className="container__form">
         <form onSubmit={handleLogin}>
-          <label htmlFor="email">E-mail:</label>
-          <input
-            type="email"
-            placeholder="Digite seu e-mail"
-            id="email"
-            autoComplete="username"
-            required="required"
-            onChange={(e) => setUser({ ...user, email: e.target.value })}
-          />
+          <div>
+            <span><MdAlternateEmail /></span>
+            <input
+              type="email"
+              placeholder="email@email.com"
+              id="email"
+              autoComplete="off"
+              required="required"
+              onChange={(e) => setUser({ ...user, email: e.target.value })}
+            />
+          </div>         
 
-          <label htmlFor="password">Senha:</label>
-          <input
+          <div>
+            <span className="password"><RiLockPasswordLine /></span>
+            <input
             type="password"
-            placeholder="Digite sua senha"
+            placeholder="Senha"
             id="password"
-            autoComplete="current-password"
+            autoComplete="off"
             required="required"
             onChange={(e) => setUser({ ...user, password: e.target.value })}
           />
+          </div>  
+
           <button type="submit">Login</button>
         </form>
       </div>

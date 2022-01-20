@@ -11,7 +11,7 @@
 
   .container__form {
     width: 30vw;
-    height: 57vh;
+    height: 40vh;
 
     padding: 4em 2em;
 
@@ -20,50 +20,69 @@
     background: #fbf7f794;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-    label {
-      display: block;      
-      
-      font-weight: 500;
-      font-size: 1.2em;
-      letter-spacing: 2px;
-
-      margin-bottom: 0.5em;
-    }
-
-    input {
+    form {
       width: 100%;
+      height: 100%;
 
-      display: block;
+      div {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 7vh;
+        margin-bottom: 1em;
+      }
 
-      padding: 1em 0;
-      margin-bottom: 1em;
+      input {
+        width: 100%;
+        height: 6vh;
 
-      font-size: 1em;
-      text-indent: 10px;
-      letter-spacing: 2px;
-    }
+        text-align: center;
 
-    button {
-      width: 50%;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
 
-      display: block;
+        border: 1px solid #787575;
+      }
 
-      font-size: 1.2em;
-      font-weight: 600;
+      input:focus-visible {
+        /* border-color: #4e4141; */
+        outline: 3px solid #f56d0270;
+        border: none;
+      }
 
-      margin: 2em auto;
-      padding: 0.5em 1em;
+      span {
+        margin-top: 0.5em;
+        margin-right: 1rem;
+        margin-left: 0.5rem;
 
-      color: #fff;
-      border: 1px solid #fff;
-      background: var(--ColorBackgnd2);
-      transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
-    }
+        position: absolute;
 
-    button:hover {
-      color: rgb(255, 255, 255);
-      background-color: #f56b02ab;
-      text-shadow: rgba(0, 0, 0, 0.35);
+        font-size: 1.3rem;
+        color: #202020;
+      }
+
+      button {
+        width: 50%;
+
+        display: block;
+
+        font-size: 1.2em;
+        font-weight: 600;
+
+        margin: 2em auto;
+        padding: 0.5em 1em;
+
+        color: #fff;
+        border: 1px solid #fff;
+        background: var(--ColorBackgnd2);
+        transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+      }
+
+      button:hover {
+        color: rgb(255, 255, 255);
+        background-color: #f56b02ab;
+        text-shadow: rgba(0, 0, 0, 0.35);
+      }
     }
   }
 }
