@@ -3,12 +3,12 @@ import "./style.scss";
 
 import LoginServices from "./services";
 
-import { MdAlternateEmail } from "react-icons/md";
-import { RiLockPasswordLine } from "react-icons/ri";
-
 import { AuthContext } from "../../Context";
 import { useNavigate } from "react-router-dom";
 import { Toaster, toast } from "react-hot-toast";
+
+import { MdAlternateEmail } from "react-icons/md";
+import { RiLockPasswordLine } from "react-icons/ri";
 
 const Login = () => {
   const navigate = useNavigate();
