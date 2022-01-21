@@ -30,10 +30,6 @@ const Cadastro = () => {
     )
   }
 
-  console.log(UserAndVideo);
-
-  /*  console.log(UserAndVideo.tipo)
-  console.log(UserAndVideo.description) */
 
   const Validation = async (lastUsers) => {
     const result = lastUsers.filter(
