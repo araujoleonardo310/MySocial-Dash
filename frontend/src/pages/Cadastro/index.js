@@ -1,38 +1,61 @@
 import React, { useState } from "react";
 import "./style.scss";
 
-import toast, { Toaster } from "react-hot-toast";
+import { toast, Toaster } from "react-hot-toast";
 
 import RegisterUsersAndVideos from "./services";
 import Container from "../../components/Container";
 
 const Cadastro = () => {
+  const [UserAndVideo, setUserAndVideo] = useState({
+    name: "",
+    email: "",
+    password: "",
+    tipo: "admin",
+    url: "",
+    title: "",
+    description: "",
+  });
 
-  const [UserAndVideo, setUserAndVideo] = useState([{}]);
+  function resetValues(){
+    setUserAndVideo({
+        name: "",
+        email: "",
+        password: "",
+        tipo: "admin",
+        url: "",
+        title: "",
+        description: "",
+      }
+    )
+  }
 
-  const Validation = async (dbUsers) => {
-    const resp = dbUsers.filter(
-      (item) =>
-        item.email === UserAndVideo.email 
+  console.log(UserAndVideo);
+
+  /*  console.log(UserAndVideo.tipo)
+  console.log(UserAndVideo.description) */
+
+  const Validation = async (lastUsers) => {
+    const result = lastUsers.filter(
+      (item) => item.email === UserAndVideo.email
     );
 
-    if (!resp.length) {
+    if (!result.length) {
       toast.success("Dados enviado!");
       await RegisterUsersAndVideos.register(UserAndVideo);
-      console.log("Registration!")
+      resetValues()
+      console.log("Registration!");
       return;
     } else {
       toast.error("Verifique os dados informados.");
-      console.log("ERROR")
+      console.log("ERROR");
       return;
     }
   };
 
-  
-
-  const handleRegister = async (event) => {
+  const handleForm = async (event) => {
     event.preventDefault();
-    const { data } = await RegisterUsersAndVideos.dbUsers();
+    const { data } = await RegisterUsersAndVideos.lastUsers();
     Validation(data, UserAndVideo);
   };
 
@@ -40,7 +63,7 @@ const Cadastro = () => {
     <Container title="Cadastro">
       <Toaster />
       <div className="container__register">
-        <form className="form" onSubmit={handleRegister}>
+        <form className="form" onSubmit={handleForm}>
           <div className="fildset__container">
             <fieldset>
               <legend>Adicionar usuários</legend>
@@ -50,6 +73,7 @@ const Cadastro = () => {
               <input
                 type="text"
                 id="name"
+                value={UserAndVideo.name}
                 onChange={(e) =>
                   setUserAndVideo({ ...UserAndVideo, name: e.target.value })
                 }
@@ -61,6 +85,7 @@ const Cadastro = () => {
               <input
                 type="email"
                 id="user"
+                value={UserAndVideo.email}
                 onChange={(e) =>
                   setUserAndVideo({ ...UserAndVideo, email: e.target.value })
                 }
@@ -79,7 +104,7 @@ const Cadastro = () => {
                     })
                   }
                 >
-                  <option value="admin">Administrdor</option>
+                  <option value="admin">Administrador</option>
                   <option value="user">Usuário</option>
                 </select>
               </div>
@@ -88,6 +113,7 @@ const Cadastro = () => {
               <input
                 type="password"
                 id="password"
+                value={UserAndVideo.password}
                 onChange={(e) =>
                   setUserAndVideo({
                     ...UserAndVideo,
@@ -109,6 +135,7 @@ const Cadastro = () => {
               <input
                 type="url"
                 id="url"
+                value={UserAndVideo.url}
                 onChange={(e) =>
                   setUserAndVideo({ ...UserAndVideo, url: e.target.value })
                 }
@@ -119,21 +146,33 @@ const Cadastro = () => {
               <input
                 type="text"
                 id="title"
+                autoComplete="on"
+                value={UserAndVideo.title}
                 onChange={(e) =>
                   setUserAndVideo({ ...UserAndVideo, title: e.target.value })
                 }
                 required="required"
               />
               <label htmlFor="description">Descrição</label>
-              <input
-                type="description"
+
+              <textarea
+                id="description"
+                name="description"
+                rows="10"
+                cols="5"
+                autoCapitalize="sentences"
+                autoComplete="on"
+                minLength={50}
+                maxLength={100}
+                placeholder="Digitando..."
+                required="required"
+                value={UserAndVideo.description}
                 onChange={(e) =>
                   setUserAndVideo({
                     ...UserAndVideo,
                     description: e.target.value,
                   })
                 }
-                required="required"
               />
             </fieldset>
           </div>

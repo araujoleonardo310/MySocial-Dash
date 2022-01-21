@@ -76,13 +76,13 @@
   padding: 0.5em 1em;
 
   color: var(--colorWhite);
-  border: 1px solid var(--colorWhite);
   background: var(--ColorBackgnd2);
+  border: 1px solid var(--colorWhite);
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 
 .btn:hover {
   color: var(--colorWhite);
-  background-color: #f56b02ab;
   border: 1px solid #e6823c;
+  background-color: #f56b02ab;
 }

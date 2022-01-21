@@ -23,12 +23,12 @@ const Login = () => {
   }
 
   function Validation(db_users) {
-    const resp = db_users.filter(
+    const result = db_users.filter(
       (item) => item.email === user.email && item.password === user.password
     );
 
-    if (resp.length !== 0) {
-      const { name, tipo } = resp[0];
+    if (result.length) {
+      const { name, tipo } = result[0];
       setUsername(name);
       setTypeUser(tipo);
       setStatusUser("active");
@@ -42,7 +42,7 @@ const Login = () => {
 
   const handleLogin = async (event) => {
     event.preventDefault();
-    const { data } = await LoginServices.login();
+    const { data } = await LoginServices.listUsers();
     return Validation(data);
   };
 

@@ -1,7 +1,7 @@
 import baseApi from "../../services";
 
 class RegisterUsersAndVideos {
-  static dbUsers() {
+  static lastUsers() {
     return baseApi.get("/users");
   }
 

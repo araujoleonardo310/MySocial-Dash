@@ -1,7 +1,7 @@
 import baseApi from "../../services";
 
 class LoginServices {
-  static login() {
+  static listUsers() {
     return baseApi.get("/users");
   }
 }

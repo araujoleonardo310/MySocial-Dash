@@ -19,9 +19,9 @@ body {
   width: 100%;
   height: 100vh;
 
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
   font-size: 1em;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
 
   background: var(--colorContainer);
 }
@@ -33,9 +33,7 @@ h2 {
 
 button {
   width: 20%;
-
   cursor: pointer;
-
   padding: 0.5em 0;
 }
 

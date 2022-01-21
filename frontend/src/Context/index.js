@@ -4,8 +4,8 @@ export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
   const [username, setUsername] = useState("notUser");
-  const [typeUser, setTypeUser] = useState("NotUser");
-  const [statusUser, setStatusUser] = useState("disable");
+  const [typeUser, setTypeUser] = useState("admin");
+  const [statusUser, setStatusUser] = useState("active");
 
   return (
     <AuthContext.Provider

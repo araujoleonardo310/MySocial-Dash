@@ -1,7 +1,7 @@
 import React from "react";
 
-import AuthProvider from "./Context";
 import Roots from "./Roots";
+import AuthProvider from "./Context";
 
 const App = () => {
   
