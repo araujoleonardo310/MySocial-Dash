@@ -56,11 +56,15 @@
     <img src="the-project/login.png">
     <br><br>
     <h4>Tela Home<h4>
-    <img src="the-project/login.png">
+    <img src="the-project/home.png">
     <br><br>
     <h4>Tela Cadastro<h4>
     <img src="the-project/cadastro.png">
-    <br>     
+    <br>
+    <h4>Tela Outras Páginas<h4>
+    <img src="the-project/outrapage.png">
+    <br>
+
 </div>
 
 <h3 id=linguagens>Linguagens & Frameworks</h3>

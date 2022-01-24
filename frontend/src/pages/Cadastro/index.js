@@ -158,8 +158,8 @@ const Cadastro = () => {
                 cols="5"
                 autoCapitalize="sentences"
                 autoComplete="on"
-                minLength={50}
-                maxLength={100}
+                minLength={20}
+                maxLength={30}
                 placeholder="Digitando..."
                 required="required"
                 value={UserAndVideo.description}

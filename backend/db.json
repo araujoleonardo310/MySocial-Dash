@@ -9,16 +9,6 @@
       "url": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4",
       "title": "Fatalidades da vida",
       "description": "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado."
-    },
-    {
-      "id": 2,
-      "name": "Teste",
-      "email": "teste@email.com",
-      "password": "teste123",
-      "tipo": "user",
-      "url": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4",
-      "title": "Fatalidades da vida",
-      "description": "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado."
     }
   ]
 }
